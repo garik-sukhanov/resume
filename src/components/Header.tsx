@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Sun, Moon, Github, Mail, Globe, Briefcase } from "lucide-react";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 
 const emptySubscribe = () => () => {};
