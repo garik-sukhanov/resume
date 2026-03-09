@@ -1,14 +1,14 @@
 {
   "Index": {
-    "title": "Fullstack Web Developer",
-    "description": "Building modern, high-performance web applications with React and Next.js.",
+    "title": "Fullstack Web Developer | Alexander Sukhanov",
+    "description": "Building modern, high-performance web and mobile applications. Specialized in React, Next.js, and Node.js with a strong focus on clean code and user experience.",
     "hero": {
-      "static": "Developer",
-      "dynamic": ["Fullstack", "Frontend", "React Native"]
+      "static": "Expert in",
+      "dynamic": ["Fullstack Dev", "Frontend Architecture", "React Native", "Next.js 14"]
     },
     "coverLetter": {
-      "title": "Cover Letter",
-      "content": "I am a passionate Fullstack Developer with experience in building scalable web applications. My expertise lies in React, Next.js, and TypeScript, with a strong focus on performance and accessibility."
+      "title": "About Me",
+      "content": "I am a Senior Fullstack Developer with 5+ years of experience in creating scalable web solutions. My expertise spans from building pixel-perfect frontends to designing robust backend systems. I am passionate about performance optimization, accessibility, and modern software design patterns."
     },
     "resume": {
       "title": "Resume",
@@ -16,10 +16,56 @@
       "view": "View Resume"
     },
     "contact": {
-      "title": "Contact",
-      "email": "Email",
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "title": "Contact Information",
+      "email": "alex.sukhanov@example.com",
+      "github": "github.com/alex-sukhanov",
+      "linkedin": "linkedin.com/in/alex-sukhanov",
+      "phone": "+7 (999) 123-45-67",
+      "location": "Moscow, Russia / Remote"
+    },
+    "techStack": {
+      "title": "Technologies & Skills",
+      "categories": [
+        {
+          "name": "Frontend",
+          "items": ["React", "Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Zustand"]
+        },
+        {
+          "name": "Backend",
+          "items": ["Node.js", "Express", "NestJS", "PostgreSQL", "Prisma", "Redis", "REST & GraphQL"]
+        },
+        {
+          "name": "Mobile",
+          "items": ["React Native", "Expo", "Native Modules", "Mobile UI/UX"]
+        },
+        {
+          "name": "DevOps & Tools",
+          "items": ["Docker", "Git", "CI/CD (GitHub Actions)", "Vercel", "AWS", "Vitest", "Cypress"]
+        }
+      ]
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "items": [
+        {
+          "role": "Senior Fullstack Developer",
+          "company": "GlobalTech Solutions",
+          "period": "Jan 2022 - Present",
+          "description": "Leading a team of 5 developers to build a high-traffic fintech platform. Optimized frontend performance by 40% and implemented a comprehensive CI/CD pipeline using GitHub Actions."
+        },
+        {
+          "role": "Fullstack Developer",
+          "company": "Innovate Web Studio",
+          "period": "Jun 2019 - Dec 2021",
+          "description": "Developed over 15 custom web applications for international clients. Specialized in migrating legacy systems to modern React/Next.js stacks."
+        },
+        {
+          "role": "Junior Frontend Developer",
+          "company": "StartUp Hub",
+          "period": "Sep 2018 - May 2019",
+          "description": "Collaborated on building an MVP for a SaaS platform. Focused on creating responsive UI components and integrating REST APIs."
+        }
+      ]
     }
   },
   "Header": {

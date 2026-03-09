@@ -1,14 +1,14 @@
 {
   "Index": {
-    "title": "Fullstack веб-разработчик",
-    "description": "Создание современных высокопроизводительных веб-приложений на React и Next.js.",
+    "title": "Fullstack веб-разработчик | Александр Суханов",
+    "description": "Создание современных высокопроизводительных веб и мобильных приложений. Специализация на React, Next.js и Node.js с упором на чистый код и пользовательский опыт.",
     "hero": {
-      "static": "Разработчик",
-      "dynamic": ["Fullstack", "Frontend", "React Native"]
+      "static": "Эксперт в",
+      "dynamic": ["Fullstack Dev", "Frontend Architecture", "React Native", "Next.js 14"]
     },
     "coverLetter": {
-      "title": "Сопроводительное письмо",
-      "content": "Я увлеченный Fullstack-разработчик с опытом создания масштабируемых веб-приложений. Моя специализация — React, Next.js и TypeScript, с упором на производительность и доступность."
+      "title": "Обо мне",
+      "content": "Я Senior Fullstack разработчик с опытом более 5 лет в создании масштабируемых веб-решений. Моя экспертиза охватывает как разработку пиксель-перфект фронтендов, так и проектирование надежных бэкенд-систем. Я увлечен оптимизацией производительности, доступностью и современными паттернами проектирования ПО."
     },
     "resume": {
       "title": "Резюме",
@@ -16,10 +16,56 @@
       "view": "Просмотреть резюме"
     },
     "contact": {
-      "title": "Контакты",
-      "email": "Электронная почта",
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "title": "Контактная информация",
+      "email": "alex.sukhanov@example.com",
+      "github": "github.com/alex-sukhanov",
+      "linkedin": "linkedin.com/in/alex-sukhanov",
+      "phone": "+7 (999) 123-45-67",
+      "location": "Москва, Россия / Удаленно"
+    },
+    "techStack": {
+      "title": "Технологии и навыки",
+      "categories": [
+        {
+          "name": "Frontend",
+          "items": ["React", "Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Zustand"]
+        },
+        {
+          "name": "Backend",
+          "items": ["Node.js", "Express", "NestJS", "PostgreSQL", "Prisma", "Redis", "REST & GraphQL"]
+        },
+        {
+          "name": "Mobile",
+          "items": ["React Native", "Expo", "Native Modules", "Mobile UI/UX"]
+        },
+        {
+          "name": "DevOps и Инструменты",
+          "items": ["Docker", "Git", "CI/CD (GitHub Actions)", "Vercel", "AWS", "Vitest", "Cypress"]
+        }
+      ]
+    },
+    "experience": {
+      "title": "Профессиональный опыт",
+      "items": [
+        {
+          "role": "Senior Fullstack разработчик",
+          "company": "GlobalTech Solutions",
+          "period": "Янв 2022 - Наст. время",
+          "description": "Руководство командой из 5 разработчиков при создании высоконагруженной финтех-платформы. Оптимизировал производительность фронтенда на 40% и внедрил комплексный CI/CD пайплайн с использованием GitHub Actions."
+        },
+        {
+          "role": "Fullstack разработчик",
+          "company": "Innovate Web Studio",
+          "period": "Июнь 2019 - Дек 2021",
+          "description": "Разработал более 15 кастомных веб-приложений для международных клиентов. Специализировался на миграции устаревших систем на современный стек React/Next.js."
+        },
+        {
+          "role": "Junior Frontend разработчик",
+          "company": "StartUp Hub",
+          "period": "Сент 2018 - Май 2019",
+          "description": "Участвовал в создании MVP для SaaS-платформы. Фокусировался на разработке адаптивных UI-компонентов и интеграции REST API."
+        }
+      ]
     }
   },
   "Header": {
