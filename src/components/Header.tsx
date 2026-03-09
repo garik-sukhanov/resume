@@ -40,8 +40,8 @@ export function Header() {
           href={`/${locale}`}
           className="font-bold text-xl flex items-center gap-2 text-foreground hover:opacity-80 transition-opacity"
         >
-          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center text-white">
-            <Briefcase className="w-5 h-5" />
+          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+            <Briefcase className="w-5 h-5 text-accent" />
           </div>
           <span className="hidden sm:inline tracking-tight font-extrabold transition-colors duration-300">
             Sukhanov.dev
@@ -51,7 +51,7 @@ export function Header() {
         <div className="flex items-center gap-2 sm:gap-4">
           <button
             onClick={toggleLocale}
-            className="px-3 py-1.5 rounded-lg border border-border hover:bg-card transition-all flex items-center gap-2 text-foreground shadow-sm active:scale-95"
+            className="px-3 py-1.5 rounded-lg border border-border hover:bg-card transition-all flex items-center gap-2 text-foreground shadow-sm active:scale-95 cursor-pointer"
             aria-label={t("language")}
           >
             <Globe className="w-4 h-4 text-secondary" />
@@ -62,7 +62,7 @@ export function Header() {
 
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-lg border border-border hover:bg-card transition-all text-foreground shadow-sm active:scale-95"
+            className="p-2 rounded-lg border border-border hover:bg-card transition-all text-foreground shadow-sm active:scale-95 cursor-pointer"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (

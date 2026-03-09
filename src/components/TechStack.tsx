@@ -26,7 +26,7 @@ export function TechStack() {
               {category.items.map((item, index) => (
                 <span
                   key={index}
-                  className="px-2 py-0.5 text-xs font-medium rounded-md bg-background text-foreground border border-border hover:border-accent transition-all duration-300"
+                  className="px-2 py-0.5 text-xs font-medium rounded-md bg-background text-foreground border border-border hover:border-accent transition-all duration-300 cursor-default"
                 >
                   {item}
                 </span>
