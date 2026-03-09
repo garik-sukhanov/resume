@@ -6,8 +6,15 @@
     },
     "description": "Full Stack разработчик с фокусом на frontend и более чем 4-летним коммерческим опытом разработки production-ready web и mobile приложений для B2B-продуктов. Экспертные знания React, TypeScript и современной frontend-архитектуры.",
     "hero": {
-      "static": "Эксперт в",
-      "dynamic": ["React.js", "Next.js", "TypeScript", "React Native", "Node.js"]
+      "static": "Разработчик",
+      "dynamic": [
+        "React",
+        "Frontend",
+        "TypeScript",
+        "React Native",
+        "Node.js",
+        "Fullstack"
+      ]
     },
     "coverLetter": {
       "title": "О себе",
@@ -32,11 +39,29 @@
       "categories": [
         {
           "name": "Frontend",
-          "items": ["React.js", "Next.js", "TypeScript", "Redux", "Jotai", "React Native", "Sass", "MUI", "ANTd"]
+          "items": [
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "Redux",
+            "Jotai",
+            "React Native",
+            "Sass",
+            "MUI",
+            "ANTd"
+          ]
         },
         {
           "name": "Backend",
-          "items": ["Node.js", "Express.js", "NestJS", "REST API", "WebSocket", "PostgreSQL", "MongoDB"]
+          "items": [
+            "Node.js",
+            "Express.js",
+            "NestJS",
+            "REST API",
+            "WebSocket",
+            "PostgreSQL",
+            "MongoDB"
+          ]
         },
         {
           "name": "Tools & DevOps",
@@ -61,7 +86,7 @@
         },
         {
           "role": "Web Developer (Программа обучения)",
-          "company": "Yandex Practicum, Moscow",
+          "company": "Yandex Practicum, Москва",
           "period": "Ноябрь 2021 — Октябрь 2022",
           "description": "Прохождение интенсивной годовой программы по full-stack веб-разработке. Выполнение учебных проектов с код-ревью в командной среде. Формирование прочной базы в React, Node.js и full-stack разработке."
         }

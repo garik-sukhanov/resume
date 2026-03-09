@@ -15,7 +15,7 @@ export function ProfileSidebar() {
       : "/FullStack dev EN Sukhanov.pdf";
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-w-[400px] mx-auto md:max-w-none">
       <div className="rounded-xl border border-card-border overflow-hidden bg-card shadow-sm transition-colors duration-300">
         <div className="relative aspect-square w-full">
           <Image
@@ -24,6 +24,7 @@ export function ProfileSidebar() {
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
         <div className="p-6 space-y-4">

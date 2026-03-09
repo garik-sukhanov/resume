@@ -4,8 +4,9 @@ import { useTheme } from "next-themes";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Sun, Moon, Github, Mail, Globe, Briefcase } from "lucide-react";
-import { useSyncExternalStore } from "react";
+import { useSyncExternalStore, useEffect, useState } from "react";
 import Link from "next/link";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const emptySubscribe = () => () => {};
 
@@ -22,6 +23,18 @@ export function Header() {
     () => false,
   );
 
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() || 0;
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   const toggleLocale = () => {
     const nextLocale = locale === "en" ? "ru" : "en";
     const newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
@@ -34,7 +47,15 @@ export function Header() {
     );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md transition-all duration-300">
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md"
+    >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-5xl">
         <Link
           href={`/${locale}`}
@@ -92,6 +113,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

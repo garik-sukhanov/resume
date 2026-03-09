@@ -6,13 +6,14 @@
     },
     "description": "Frontend-focused Full Stack Developer with 4 years of commercial experience building production web and mobile applications for B2B products. Strong expertise in React, TypeScript, and modern frontend architecture.",
     "hero": {
-      "static": "Expert in",
+      "static": "Developer",
       "dynamic": [
-        "React.js",
-        "Next.js",
+        "React",
+        "Frontend",
         "TypeScript",
         "React Native",
-        "Node.js"
+        "Node.js",
+        "Fullstack"
       ]
     },
     "coverLetter": {

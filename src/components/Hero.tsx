@@ -44,10 +44,7 @@ export function Hero() {
         transition={{ duration: 0.5 }}
         className="space-y-2 w-full"
       >
-        <div className="flex flex-col sm:flex-row sm:items-center flex-wrap gap-x-2 min-h-[4rem] sm:min-h-[3rem]">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground whitespace-nowrap transition-colors duration-300">
-            {staticWord}
-          </h1>
+        <div className="flex flex-col sm:flex-row sm:items-center flex-wrap gap-x-2 min-h-[4rem] sm:min-h-[3rem] flex-row">
           <div className="flex items-center h-10 sm:h-12">
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#0969da] to-[#2ea043] dark:from-[#2f81f7] dark:to-[#3fb950] break-words">
               {displayText}
@@ -58,9 +55,12 @@ export function Hero() {
               />
             </h1>
           </div>
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground whitespace-nowrap transition-colors duration-300">
+            {staticWord}
+          </h1>
         </div>
         <p className="max-w-2xl text-md sm:text-lg text-secondary leading-relaxed transition-colors duration-300">
-          {useTranslations('Index')('description')}
+          {useTranslations("Index")("description")}
         </p>
       </motion.div>
     </section>
