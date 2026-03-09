@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Code, Briefcase } from "lucide-react";
+import { Code } from "lucide-react";
 
 export function TechStack() {
   const t = useTranslations("Index.techStack");

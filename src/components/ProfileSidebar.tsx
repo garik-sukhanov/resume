@@ -1,15 +1,7 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import {
-  Download,
-  Mail,
-  Github,
-  MapPin,
-  Phone,
-  NotebookIcon,
-  Send,
-} from "lucide-react";
+import { Download, Mail, Github, MapPin, Phone, Send } from "lucide-react";
 import Image from "next/image";
 
 export function ProfileSidebar() {
@@ -93,16 +85,17 @@ export function ProfileSidebar() {
             </div>
           </div>
 
-          <div className="pt-4 relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0969da] via-[#2ea043] to-[#0969da] rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
-            <a
-              href={pdfUrl}
-              download
-              className="relative w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-card text-foreground border border-card-border rounded-lg text-sm font-bold transition-all hover:bg-transparent hover:text-white dark:hover:text-white"
-            >
-              <Download className="w-4 h-4" />
-              {t("resume.download")}
-            </a>
+          <div className="pt-4">
+            <div className="relative p-[1.5px] rounded-lg bg-gradient-to-r from-[#0969da] via-[#2ea043] to-[#0969da] animate-gradient-x transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-none">
+              <a
+                href={pdfUrl}
+                download
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-background text-foreground rounded-[7px] text-sm font-bold transition-all hover:bg-card"
+              >
+                <Download className="w-4 h-4 text-accent" />
+                {t("resume.download")}
+              </a>
+            </div>
           </div>
         </div>
       </div>
