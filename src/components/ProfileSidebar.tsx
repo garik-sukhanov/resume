@@ -8,12 +8,12 @@ import {
   MapPin,
   Phone,
   NotebookIcon,
+  Send,
 } from "lucide-react";
 import Image from "next/image";
 
 export function ProfileSidebar() {
   const t = useTranslations("Index");
-  const personalInfo = useTranslations("Index.personalInfo");
 
   const locale = useLocale();
 
@@ -24,11 +24,11 @@ export function ProfileSidebar() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl border border-[#d0d7de] dark:border-[#30363d] overflow-hidden bg-white dark:bg-[#0d1117] shadow-sm ring-1 ring-[#d0d7de] dark:ring-transparent">
+      <div className="rounded-xl border border-card-border overflow-hidden bg-card shadow-sm transition-colors duration-300">
         <div className="relative aspect-square w-full">
           <Image
             src="/sukhanov-photo.jpeg"
-            alt={personalInfo.name}
+            alt={t("personalInfo.name")}
             fill
             className="object-cover"
             priority
@@ -36,68 +36,69 @@ export function ProfileSidebar() {
         </div>
         <div className="p-6 space-y-4">
           <div className="space-y-1">
-            <h2 className="text-2xl font-bold text-[#1f2328] dark:text-[#f0f6fc]">
-              {personalInfo("name")}
+            <h2 className="text-2xl font-bold text-foreground transition-colors duration-300">
+              {t("personalInfo.name")}
             </h2>
-            <p className="text-[#636c76] dark:text-[#8b949e] font-medium">
-              {personalInfo("prof")}
+            <p className="text-secondary font-medium transition-colors duration-300">
+              {t("personalInfo.prof")}
             </p>
           </div>
 
-          <div className="h-px bg-[#d0d7de] dark:bg-[#30363d]" />
+          <div className="h-px bg-border transition-colors duration-300" />
 
-          <div className="space-y-3 text-sm text-[#24292f] dark:text-[#c9d1d9]">
+          <div className="space-y-3 text-sm text-foreground transition-colors duration-300">
             <div className="flex items-center gap-3">
-              <MapPin className="w-4 h-4 text-[#636c76] dark:text-[#8b949e]" />
+              <MapPin className="w-4 h-4 text-secondary" />
               <span>{t("contact.location")}</span>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-[#636c76] dark:text-[#8b949e]" />
+              <Mail className="w-4 h-4 text-secondary" />
               <a
                 href={`mailto:${t("contact.email")}`}
-                className="hover:text-[#0969da] dark:hover:text-[#2f81f7] hover:underline transition-all"
+                className="hover:text-accent hover:underline transition-all"
               >
                 {t("contact.email")}
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-[#636c76] dark:text-[#8b949e]" />
+              <Phone className="w-4 h-4 text-secondary" />
               <a
                 href={`tel:${t("contact.phone")}`}
-                className="hover:text-[#0969da] dark:hover:text-[#2f81f7] hover:underline transition-all"
+                className="hover:text-accent hover:underline transition-all"
               >
                 {t("contact.phone")}
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <Github className="w-4 h-4 text-[#636c76] dark:text-[#8b949e]" />
+              <Send className="w-4 h-4 text-secondary" />
+              <a
+                href={`https://t.me/${t("contact.telegram").replace("@", "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent hover:underline transition-all"
+              >
+                {t("contact.telegram")}
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <Github className="w-4 h-4 text-secondary" />
               <a
                 href={`https://${t("contact.github")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#0969da] dark:hover:text-[#2f81f7] hover:underline transition-all"
+                className="hover:text-accent hover:underline transition-all"
               >
                 GitHub
               </a>
             </div>
-            <div className="flex items-center gap-3">
-              <NotebookIcon className="w-4 h-4 text-[#636c76] dark:text-[#8b949e]" />
-              <a
-                href={`https://${t("contact.hh")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#0969da] dark:hover:text-[#2f81f7] hover:underline transition-all"
-              >
-                HH.ru
-              </a>
-            </div>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-4 relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0969da] via-[#2ea043] to-[#0969da] rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
             <a
               href={pdfUrl}
               download
-              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0969da] hover:bg-[#0861c5] text-white dark:bg-[#21262d] dark:hover:bg-[#30363d] dark:text-[#f0f6fc] border border-transparent dark:border-[#30363d] rounded-lg text-sm font-semibold transition-all shadow-sm active:scale-[0.98]"
+              className="relative w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-card text-foreground border border-card-border rounded-lg text-sm font-bold transition-all hover:bg-transparent hover:text-white dark:hover:text-white"
             >
               <Download className="w-4 h-4" />
               {t("resume.download")}
@@ -106,12 +107,12 @@ export function ProfileSidebar() {
         </div>
       </div>
 
-      <div className="p-6 rounded-xl border border-[#d0d7de] dark:border-[#30363d] bg-white dark:bg-[#0d1117] shadow-sm ring-1 ring-[#d0d7de] dark:ring-transparent">
-        <h3 className="text-sm font-bold text-[#1f2328] dark:text-[#f0f6fc] mb-3 uppercase tracking-wider">
+      <div className="p-6 rounded-xl border border-card-border bg-card shadow-sm transition-colors duration-300">
+        <h3 className="text-sm font-bold text-foreground mb-3 uppercase tracking-wider transition-colors duration-300">
           {t("coverLetter.title")}
         </h3>
-        <p className="text-sm text-[#24292f] dark:text-[#c9d1d9] leading-relaxed italic">
-          `{t("coverLetter.content")}`
+        <p className="text-sm text-foreground leading-relaxed italic transition-colors duration-300">
+          &ldquo;{t("coverLetter.content")}&rdquo;
         </p>
       </div>
     </div>

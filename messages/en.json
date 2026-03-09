@@ -1,18 +1,23 @@
 {
   "Index": {
     "personalInfo": {
-      "name": "Garik Sukhanov",
-      "prof": "Fullstack Web Developer"
+      "name": "Igor Sukhanov",
+      "prof": "Full Stack Web Developer (frontend-focused)"
     },
-    "title": "Fullstack Web Developer | Garik Sukhanov",
-    "description": "Building modern, high-performance web and mobile applications. Specialized in React, Next.js, and Node.js with a strong focus on clean code and user experience.",
+    "description": "Frontend-focused Full Stack Developer with 4 years of commercial experience building production web and mobile applications for B2B products. Strong expertise in React, TypeScript, and modern frontend architecture.",
     "hero": {
-      "static": "Developer",
-      "dynamic": ["Fullstack", "Frontend", "React Native"]
+      "static": "Expert in",
+      "dynamic": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "React Native",
+        "Node.js"
+      ]
     },
     "coverLetter": {
-      "title": "About Me",
-      "content": "Middle Full-Stack Developer with more than 4 years of experience. My projects include admin panels for large enterprises, CRM systems for sales departments, a service for managing map reviews, and a cross-platform application for agricultural machinery. My primary tech stack includes React, TypeScript, and TanStack Query. I also have experience in mobile development with React Native, backend development, as well as basic server administration and CI/CD setup."
+      "title": "Professional Summary",
+      "content": "Frontend-focused Full Stack Developer with 4 years of commercial experience building production web and mobile applications for B2B products. Strong expertise in React, TypeScript, and modern frontend architecture. Proven track record in developing pixel-perfect user interfaces and delivering scalable solutions. Hands-on experience with React Native and full-stack development using Node.js (Express, NestJS)."
     },
     "resume": {
       "title": "Resume",
@@ -21,11 +26,12 @@
     },
     "contact": {
       "title": "Contact Information",
-      "email": "igoreksuhanov@gmail.com",
+      "email": "sukhanovigor@bk.ru",
       "github": "github.com/garik-sukhanov",
-      "hh": "hh.ru/resume/666091d7ff0e57cfc70039ed1f454467757761",
-      "phone": "+7 (999) 529-55-96",
-      "location": "Voronezh, Russia / Remote"
+      "linkedin": "linkedin.com/in/garik-sukhanov",
+      "phone": "+7 (999) 529-5596",
+      "location": "Voronezh, Russia / Remote",
+      "telegram": "@garik_sukhanov"
     },
     "techStack": {
       "title": "Technologies & Skills",
@@ -34,12 +40,15 @@
           "name": "Frontend",
           "items": [
             "React",
-            "Next.js 14",
+            "Next.js",
+            "ReactNative",
             "TypeScript",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Redux Toolkit",
-            "Zustand"
+            "Redux",
+            "Jotai",
+            "TanStack Query",
+            "Sass",
+            "MUI",
+            "ANTd"
           ]
         },
         {
@@ -48,26 +57,22 @@
             "Node.js",
             "Express",
             "NestJS",
+            "REST API",
+            "WebSocket",
             "PostgreSQL",
-            "Prisma",
-            "Redis",
-            "REST & GraphQL"
+            "MongoDB"
           ]
         },
         {
-          "name": "Mobile",
-          "items": ["React Native", "Expo", "Native Modules", "Mobile UI/UX"]
-        },
-        {
-          "name": "DevOps & Tools",
+          "name": "Tools & DevOps",
           "items": [
-            "Docker",
             "Git",
-            "CI/CD (GitHub Actions)",
-            "Vercel",
-            "AWS",
-            "Vitest",
-            "Cypress"
+            "GitHub",
+            "Docker",
+            "Docker Compose",
+            "CI/CD",
+            "Linux",
+            "Nginx"
           ]
         }
       ]
@@ -76,22 +81,22 @@
       "title": "Professional Experience",
       "items": [
         {
-          "role": "Senior Fullstack Developer",
-          "company": "GlobalTech Solutions",
-          "period": "Jan 2022 - Present",
-          "description": "Leading a team of 5 developers to build a high-traffic fintech platform. Optimized frontend performance by 40% and implemented a comprehensive CI/CD pipeline using GitHub Actions."
+          "role": "Web Developer (React.js, ReactNative, Node.js)",
+          "company": "KOBLiK Group, Voronezh",
+          "period": "November 2023 – Present",
+          "description": "Developed and maintained web and mobile applications for B2B clients using React, TypeScript, and Node.js. Led migration of CRM mobile application to React Native Expo, enabling seamless web deployment. Participated in frontend architecture design for client portal and industrial equipment applications."
         },
         {
-          "role": "Fullstack Developer",
-          "company": "Innovate Web Studio",
-          "period": "Jun 2019 - Dec 2021",
-          "description": "Developed over 15 custom web applications for international clients. Specialized in migrating legacy systems to modern React/Next.js stacks."
+          "role": "Full Stack web Developer (React.js, Node.js)",
+          "company": "NeuroCity, Voronezh",
+          "period": "July 2022 – November 2023",
+          "description": "Built comprehensive admin panel for content and device management (frontend + backend). Reworked and optimized SVG-based map editor, improving performance and user experience. Designed and implemented technical support module from scratch. Extended analytics and data visualization functionality."
         },
         {
-          "role": "Junior Frontend Developer",
-          "company": "StartUp Hub",
-          "period": "Sep 2018 - May 2019",
-          "description": "Collaborated on building an MVP for a SaaS platform. Focused on creating responsive UI components and integrating REST APIs."
+          "role": "Web Developer (Education Program)",
+          "company": "Yandex Practicum, Moscow",
+          "period": "November 2021 – October 2022",
+          "description": "Completed an intensive one-year full-stack web development program. Executed course projects with code reviews in a team environment. Built a solid foundation in React, Node.js, and full-stack development."
         }
       ]
     }

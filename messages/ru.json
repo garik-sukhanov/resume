@@ -1,18 +1,17 @@
 {
   "Index": {
     "personalInfo": {
-      "name": "Гарик Суханов",
-      "prof": "Fullstack веб-разработчик"
+      "name": "Игорь Суханов",
+      "prof": "Full Stack Web Developer (frontend-focused)"
     },
-    "title": "Fullstack веб-разработчик | Гарик Суханов",
-    "description": "Создание современных высокопроизводительных веб и мобильных приложений. Специализация на React, Next.js и Node.js с упором на чистый код и пользовательский опыт.",
+    "description": "Full Stack разработчик с фокусом на frontend и более чем 4-летним коммерческим опытом разработки production-ready web и mobile приложений для B2B-продуктов. Экспертные знания React, TypeScript и современной frontend-архитектуры.",
     "hero": {
-      "static": "Разработчик",
-      "dynamic": ["Fullstack", "Frontend", "React Native"]
+      "static": "Эксперт в",
+      "dynamic": ["React.js", "Next.js", "TypeScript", "React Native", "Node.js"]
     },
     "coverLetter": {
-      "title": "Обо мне",
-      "content": "Middle Fullstack разработчик с опытом более 4 лет. Среди моих проектов админ панели для крупных предприятий, crm системы для отдела продаж, сервис для работы с отзывами на картах, кроссплатформенное приложение для сельхоз техники. Основной стек: React, TypeScript, TanStack query, так же есть опыт мобильной разработки на ReactNative, разработка бекэнд части, базовые навыки администрирования сервера, CI/CD."
+      "title": "О себе",
+      "content": "Full Stack разработчик с фокусом на frontend и более чем 4-летним коммерческим опытом разработки production-ready web и mobile приложений для B2B-продуктов. Экспертные знания React, TypeScript и современной frontend-архитектуры. Опыт создания pixel-perfect интерфейсов и разработки масштабируемых решений. Практический опыт работы с React Native и full-stack разработкой на Node.js (Express, NestJS)."
     },
     "resume": {
       "title": "Резюме",
@@ -21,54 +20,27 @@
     },
     "contact": {
       "title": "Контактная информация",
-      "email": "igoreksuhanov@gmail.com",
+      "email": "sukhanovigor@bk.ru",
       "github": "github.com/garik-sukhanov",
-      "hh": "hh.ru/resume/666091d7ff0e57cfc70039ed1f454467757761",
-      "phone": "+7 (999) 529-55-96",
-      "location": "Воронеж, Россия / Удаленно"
+      "linkedin": "linkedin.com/in/garik-sukhanov",
+      "phone": "+7 (999) 529-5596",
+      "location": "Воронеж, Россия / Удаленно",
+      "telegram": "@garik_sukhanov"
     },
     "techStack": {
       "title": "Технологии и навыки",
       "categories": [
         {
           "name": "Frontend",
-          "items": [
-            "React",
-            "Next.js 14",
-            "TypeScript",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Redux Toolkit",
-            "Zustand"
-          ]
+          "items": ["React.js", "Next.js", "TypeScript", "Redux", "Jotai", "React Native", "Sass", "MUI", "ANTd"]
         },
         {
           "name": "Backend",
-          "items": [
-            "Node.js",
-            "Express",
-            "NestJS",
-            "PostgreSQL",
-            "Prisma",
-            "Redis",
-            "REST & GraphQL"
-          ]
+          "items": ["Node.js", "Express.js", "NestJS", "REST API", "WebSocket", "PostgreSQL", "MongoDB"]
         },
         {
-          "name": "Mobile",
-          "items": ["React Native", "Expo", "Native Modules", "Mobile UI/UX"]
-        },
-        {
-          "name": "DevOps и Инструменты",
-          "items": [
-            "Docker",
-            "Git",
-            "CI/CD (GitHub Actions)",
-            "Vercel",
-            "AWS",
-            "Vitest",
-            "Cypress"
-          ]
+          "name": "Tools & DevOps",
+          "items": ["Git", "GitHub", "Docker", "Docker Compose", "CI/CD"]
         }
       ]
     },
@@ -76,22 +48,22 @@
       "title": "Профессиональный опыт",
       "items": [
         {
-          "role": "Senior Fullstack разработчик",
-          "company": "GlobalTech Solutions",
-          "period": "Янв 2022 - Наст. время",
-          "description": "Руководство командой из 5 разработчиков при создании высоконагруженной финтех-платформы. Оптимизировал производительность фронтенда на 40% и внедрил комплексный CI/CD пайплайн с использованием GitHub Actions."
+          "role": "Веб разработчик",
+          "company": "KOBLiK Group, Воронеж",
+          "period": "Ноябрь 2023 — настоящее время",
+          "description": "Разработка и сопровождение web и mobile приложений для B2B-клиентов с использованием React, TypeScript и Node.js. Миграция мобильного CRM-приложения на React Native Expo с доработкой под особенности фреймвокера. Участие в проектировании frontend-архитектуры клиентского портала и приложений для промышленного оборудования."
         },
         {
-          "role": "Fullstack разработчик",
-          "company": "Innovate Web Studio",
-          "period": "Июнь 2019 - Дек 2021",
-          "description": "Разработал более 15 кастомных веб-приложений для международных клиентов. Специализировался на миграции устаревших систем на современный стек React/Next.js."
+          "role": "Full Stack веб разработкчик",
+          "company": "NeuroCity, Воронеж",
+          "period": "Июль 2022 — Ноябрь 2023",
+          "description": "Разработка полнофункциональной административной панели (frontend + backend) для управления контентом и навигационными устройствами. Переработка и оптимизация редактора карт на базе SVG с улучшением производительности и UX. Проектирование и реализация модуля технической поддержки с нуля. Расширение функционала аналитики и визуализации данных."
         },
         {
-          "role": "Junior Frontend разработчик",
-          "company": "StartUp Hub",
-          "period": "Сент 2018 - Май 2019",
-          "description": "Участвовал в создании MVP для SaaS-платформы. Фокусировался на разработке адаптивных UI-компонентов и интеграции REST API."
+          "role": "Web Developer (Программа обучения)",
+          "company": "Yandex Practicum, Moscow",
+          "period": "Ноябрь 2021 — Октябрь 2022",
+          "description": "Прохождение интенсивной годовой программы по full-stack веб-разработке. Выполнение учебных проектов с код-ревью в командной среде. Формирование прочной базы в React, Node.js и full-stack разработке."
         }
       ]
     }

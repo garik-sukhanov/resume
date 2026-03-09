@@ -2,28 +2,55 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #24292f;
+  --foreground: #1f2328;
   --border: #d0d7de;
+  --card-bg: #ffffff;
+  --card-border: #d0d7de;
+  --secondary-text: #636c76;
+  --accent: #0969da;
 }
 
 .dark {
   --background: #0d1117;
-  --foreground: #c9d1d9;
+  --foreground: #f0f6fc;
   --border: #30363d;
+  --card-bg: #161b22;
+  --card-border: #30363d;
+  --secondary-text: #8b949e;
+  --accent: #2f81f7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border: var(--border);
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-secondary: var(--secondary-text);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-gradient-x: gradient-x 3s ease infinite;
+
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @layer base {
