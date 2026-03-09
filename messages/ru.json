@@ -1,0 +1,34 @@
+{
+  "Index": {
+    "title": "Fullstack веб-разработчик",
+    "description": "Создание современных высокопроизводительных веб-приложений на React и Next.js.",
+    "hero": {
+      "static": "Разработчик",
+      "dynamic": ["Fullstack", "Frontend", "React Native"]
+    },
+    "coverLetter": {
+      "title": "Сопроводительное письмо",
+      "content": "Я увлеченный Fullstack-разработчик с опытом создания масштабируемых веб-приложений. Моя специализация — React, Next.js и TypeScript, с упором на производительность и доступность."
+    },
+    "resume": {
+      "title": "Резюме",
+      "download": "Скачать резюме",
+      "view": "Просмотреть резюме"
+    },
+    "contact": {
+      "title": "Контакты",
+      "email": "Электронная почта",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "Header": {
+    "home": "Главная",
+    "projects": "Проекты",
+    "contact": "Контакты",
+    "language": "Язык"
+  },
+  "Footer": {
+    "rights": "Все права защищены."
+  }
+}

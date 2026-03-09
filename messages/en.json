@@ -1,0 +1,34 @@
+{
+  "Index": {
+    "title": "Fullstack Web Developer",
+    "description": "Building modern, high-performance web applications with React and Next.js.",
+    "hero": {
+      "static": "Developer",
+      "dynamic": ["Fullstack", "Frontend", "React Native"]
+    },
+    "coverLetter": {
+      "title": "Cover Letter",
+      "content": "I am a passionate Fullstack Developer with experience in building scalable web applications. My expertise lies in React, Next.js, and TypeScript, with a strong focus on performance and accessibility."
+    },
+    "resume": {
+      "title": "Resume",
+      "download": "Download CV",
+      "view": "View Resume"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "Header": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  }
+}
