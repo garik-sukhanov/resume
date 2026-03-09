@@ -1,14 +1,18 @@
 {
   "Index": {
-    "title": "Fullstack Web Developer | Alexander Sukhanov",
+    "personalInfo": {
+      "name": "Garik Sukhanov",
+      "prof": "Fullstack Web Developer"
+    },
+    "title": "Fullstack Web Developer | Garik Sukhanov",
     "description": "Building modern, high-performance web and mobile applications. Specialized in React, Next.js, and Node.js with a strong focus on clean code and user experience.",
     "hero": {
-      "static": "Expert in",
-      "dynamic": ["Fullstack Dev", "Frontend Architecture", "React Native", "Next.js 14"]
+      "static": "Developer",
+      "dynamic": ["Fullstack", "Frontend", "React Native"]
     },
     "coverLetter": {
       "title": "About Me",
-      "content": "I am a Senior Fullstack Developer with 5+ years of experience in creating scalable web solutions. My expertise spans from building pixel-perfect frontends to designing robust backend systems. I am passionate about performance optimization, accessibility, and modern software design patterns."
+      "content": "Middle Full-Stack Developer with more than 4 years of experience. My projects include admin panels for large enterprises, CRM systems for sales departments, a service for managing map reviews, and a cross-platform application for agricultural machinery. My primary tech stack includes React, TypeScript, and TanStack Query. I also have experience in mobile development with React Native, backend development, as well as basic server administration and CI/CD setup."
     },
     "resume": {
       "title": "Resume",
@@ -17,22 +21,38 @@
     },
     "contact": {
       "title": "Contact Information",
-      "email": "alex.sukhanov@example.com",
-      "github": "github.com/alex-sukhanov",
-      "linkedin": "linkedin.com/in/alex-sukhanov",
-      "phone": "+7 (999) 123-45-67",
-      "location": "Moscow, Russia / Remote"
+      "email": "igoreksuhanov@gmail.com",
+      "github": "github.com/garik-sukhanov",
+      "hh": "hh.com/in/garik-sukhanov",
+      "phone": "+7 (999) 529-55-96",
+      "location": "Voronezh, Russia / Remote"
     },
     "techStack": {
       "title": "Technologies & Skills",
       "categories": [
         {
           "name": "Frontend",
-          "items": ["React", "Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Zustand"]
+          "items": [
+            "React",
+            "Next.js 14",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Redux Toolkit",
+            "Zustand"
+          ]
         },
         {
           "name": "Backend",
-          "items": ["Node.js", "Express", "NestJS", "PostgreSQL", "Prisma", "Redis", "REST & GraphQL"]
+          "items": [
+            "Node.js",
+            "Express",
+            "NestJS",
+            "PostgreSQL",
+            "Prisma",
+            "Redis",
+            "REST & GraphQL"
+          ]
         },
         {
           "name": "Mobile",
@@ -40,7 +60,15 @@
         },
         {
           "name": "DevOps & Tools",
-          "items": ["Docker", "Git", "CI/CD (GitHub Actions)", "Vercel", "AWS", "Vitest", "Cypress"]
+          "items": [
+            "Docker",
+            "Git",
+            "CI/CD (GitHub Actions)",
+            "Vercel",
+            "AWS",
+            "Vitest",
+            "Cypress"
+          ]
         }
       ]
     },

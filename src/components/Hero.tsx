@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
@@ -45,9 +45,6 @@ export function Hero() {
         className="space-y-2 w-full"
       >
         <div className="flex flex-col sm:flex-row sm:items-center flex-wrap gap-x-2 min-h-[4rem] sm:min-h-[3rem]">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1f2328] dark:text-[#f0f6fc] whitespace-nowrap">
-            {staticWord}
-          </h1>
           <div className="flex items-center h-10 sm:h-12">
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#0969da] to-[#2ea043] dark:from-[#2f81f7] dark:to-[#3fb950] break-words">
               {displayText}
@@ -58,6 +55,9 @@ export function Hero() {
               />
             </h1>
           </div>
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1f2328] dark:text-[#f0f6fc] whitespace-nowrap">
+            {staticWord}
+          </h1>
         </div>
         <p className="max-w-2xl text-md sm:text-lg text-[#636c76] dark:text-[#8b949e] leading-relaxed">
           {useTranslations("Index")("description")}

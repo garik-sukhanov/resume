@@ -1,14 +1,18 @@
 {
   "Index": {
-    "title": "Fullstack веб-разработчик | Александр Суханов",
+    "personalInfo": {
+      "name": "Гарик Суханов",
+      "prof": "Fullstack веб-разработчик"
+    },
+    "title": "Fullstack веб-разработчик | Гарик Суханов",
     "description": "Создание современных высокопроизводительных веб и мобильных приложений. Специализация на React, Next.js и Node.js с упором на чистый код и пользовательский опыт.",
     "hero": {
-      "static": "Эксперт в",
-      "dynamic": ["Fullstack Dev", "Frontend Architecture", "React Native", "Next.js 14"]
+      "static": "Разработчик",
+      "dynamic": ["Fullstack", "Frontend", "React Native"]
     },
     "coverLetter": {
       "title": "Обо мне",
-      "content": "Я Senior Fullstack разработчик с опытом более 5 лет в создании масштабируемых веб-решений. Моя экспертиза охватывает как разработку пиксель-перфект фронтендов, так и проектирование надежных бэкенд-систем. Я увлечен оптимизацией производительности, доступностью и современными паттернами проектирования ПО."
+      "content": "Middle Fullstack разработчик с опытом более 4 лет. Среди моих проектов админ панели для крупных предприятий, crm системы для отдела продаж, сервис для работы с отзывами на картах, кроссплатформенное приложение для сельхоз техники. Основной стек: React, TypeScript, TanStack query, так же есть опыт мобильной разработки на ReactNative, разработка бекэнд части, базовые навыки администрирования сервера, CI/CD."
     },
     "resume": {
       "title": "Резюме",
@@ -17,22 +21,38 @@
     },
     "contact": {
       "title": "Контактная информация",
-      "email": "alex.sukhanov@example.com",
-      "github": "github.com/alex-sukhanov",
-      "linkedin": "linkedin.com/in/alex-sukhanov",
-      "phone": "+7 (999) 123-45-67",
-      "location": "Москва, Россия / Удаленно"
+      "email": "igoreksuhanov@gmail.com",
+      "github": "github.com/garik-sukhanov",
+      "hh": null,
+      "phone": "+7 (999) 529-55-96",
+      "location": "Воронеж, Россия / Удаленно"
     },
     "techStack": {
       "title": "Технологии и навыки",
       "categories": [
         {
           "name": "Frontend",
-          "items": ["React", "Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Zustand"]
+          "items": [
+            "React",
+            "Next.js 14",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Redux Toolkit",
+            "Zustand"
+          ]
         },
         {
           "name": "Backend",
-          "items": ["Node.js", "Express", "NestJS", "PostgreSQL", "Prisma", "Redis", "REST & GraphQL"]
+          "items": [
+            "Node.js",
+            "Express",
+            "NestJS",
+            "PostgreSQL",
+            "Prisma",
+            "Redis",
+            "REST & GraphQL"
+          ]
         },
         {
           "name": "Mobile",
@@ -40,7 +60,15 @@
         },
         {
           "name": "DevOps и Инструменты",
-          "items": ["Docker", "Git", "CI/CD (GitHub Actions)", "Vercel", "AWS", "Vitest", "Cypress"]
+          "items": [
+            "Docker",
+            "Git",
+            "CI/CD (GitHub Actions)",
+            "Vercel",
+            "AWS",
+            "Vitest",
+            "Cypress"
+          ]
         }
       ]
     },
