@@ -161,6 +161,19 @@
             "/assets/case-4-2.jpg",
             "/assets/case-4-3.jpg"
           ]
+        },
+        {
+          "title": "Admin Panel for Agricultural Machinery Monitoring & Data Aggregation",
+          "tech": ["Next.js", "Tanstack Query", "Zod", "React Hook Form"],
+          "features": [
+            "Role-based access control",
+            "Data aggregation from various devices",
+            "Monitoring",
+            "Statistics",
+            "Support service",
+            "External service integration"
+          ],
+          "images": ["/assets/case-5-1.jpg", "/assets/case-5-2.jpg"]
         }
       ]
     }

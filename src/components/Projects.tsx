@@ -2,26 +2,30 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
   ExternalLink,
   Layers,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
+  ImageIcon,
 } from "lucide-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 interface ProjectItem {
   title: string;
   tech: string[];
   features: string[];
-  images: string[];
+  images: string[] | null;
 }
 
 function ProjectSlider({ images, title }: { images: string[]; title: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: false, margin: "-50%" });
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -57,17 +61,32 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
     [currentIndex, images.length],
   );
 
-  // Autoplay
+  // Autoplay on hover/in-view
   useEffect(() => {
-    const timer = setInterval(() => {
-      paginate(1);
-    }, 3000);
-
+    let timer: NodeJS.Timeout;
+    if (isHovered || isInView) {
+      timer = setInterval(() => {
+        paginate(1);
+      }, 3000);
+    }
     return () => clearInterval(timer);
-  }, [paginate]);
+  }, [isHovered, isInView, paginate]);
+
+  if (!images || images.length === 0) {
+    return (
+      <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card flex items-center justify-center">
+        <ImageIcon className="w-24 h-24 text-border" />
+      </div>
+    );
+  }
 
   return (
-    <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card transition-colors duration-300 group/slider">
+    <div
+      ref={cardRef}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card transition-colors duration-300 group/slider"
+    >
       {/* Click Navigation Areas */}
       <div
         className="absolute inset-y-0 left-0 w-1/4 z-30 cursor-w-resize"
@@ -105,16 +124,14 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
               fill
               className="object-contain"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
+              priority={currentIndex === 0}
             />
           </div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay gradient for controls visibility */}
       <div className="absolute inset-0 bg-black/5 group-hover/slider:bg-black/10 transition-colors duration-300 pointer-events-none z-10" />
 
-      {/* Navigation Buttons */}
       {images.length > 1 && (
         <>
           <button
@@ -140,7 +157,6 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
         </>
       )}
 
-      {/* Dots Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex gap-2">
         {images.map((_, i) => (
           <button
@@ -150,11 +166,7 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
               setDirection(i > currentIndex ? 1 : -1);
               setCurrentIndex(i);
             }}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === currentIndex
-                ? "w-6 bg-accent"
-                : "bg-white/50 hover:bg-white/80"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-accent" : "bg-white/50 hover:bg-white/80"}`}
             aria-label={`Go to image ${i + 1}`}
           />
         ))}
@@ -170,22 +182,36 @@ function ProjectCard({
   project: ProjectItem;
   index: number;
 }) {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: false, margin: "-50%" });
+
   return (
     <motion.article
+      ref={cardRef}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       className="group relative w-full bg-card border-y border-border md:border-x md:rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 mb-8 last:mb-0"
     >
-      <div className="flex flex-col lg:flex-row min-h-[500px]">
-        {/* Slider Section */}
+      {/* Gradient highlight for active card */}
+      <AnimatePresence>
+        {isInView && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute -inset-px rounded-2xl bg-gradient-to-r from-accent via-green-500 to-accent pointer-events-none"
+          />
+        )}
+      </AnimatePresence>
+
+      <div className="relative flex flex-col lg:flex-row">
         <div className="lg:w-1/2 relative">
-          <ProjectSlider images={project.images} title={project.title} />
+          <ProjectSlider images={project.images || []} title={project.title} />
         </div>
 
-        {/* Content Section */}
-        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-start space-y-6 bg-card">
+        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center space-y-6 bg-card">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-accent font-medium text-sm tracking-wider uppercase">
               <Layers className="w-4 h-4" />
