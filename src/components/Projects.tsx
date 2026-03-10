@@ -67,7 +67,7 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
   }, [paginate]);
 
   return (
-    <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-[#f6f8fa] dark:bg-[#0d1117] group/slider">
+    <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card transition-colors duration-300 group/slider">
       {/* Click Navigation Areas */}
       <div
         className="absolute inset-y-0 left-0 w-1/4 z-30 cursor-w-resize"
