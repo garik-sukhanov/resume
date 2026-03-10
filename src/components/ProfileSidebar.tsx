@@ -100,15 +100,6 @@ export function ProfileSidebar() {
           </div>
         </div>
       </div>
-
-      <div className="p-6 rounded-xl border border-card-border bg-card shadow-sm transition-colors duration-300">
-        <h3 className="text-sm font-bold text-foreground mb-3 uppercase tracking-wider transition-colors duration-300">
-          {t("coverLetter.title")}
-        </h3>
-        <p className="text-sm text-foreground leading-relaxed italic transition-colors duration-300">
-          &ldquo;{t("coverLetter.content")}&rdquo;
-        </p>
-      </div>
     </div>
   );
 }

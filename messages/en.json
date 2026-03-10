@@ -85,19 +85,19 @@
           "role": "Web Developer (React.js, ReactNative, Node.js)",
           "company": "KOBLiK Group, Voronezh",
           "period": "November 2023 – Present",
-          "description": "Developed and maintained web and mobile applications for B2B clients using React, TypeScript, and Node.js. Led migration of CRM mobile application to React Native Expo, enabling seamless web deployment. Participated in frontend architecture design for client portal and industrial equipment applications."
+          "description": "- Developed and maintained web and mobile applications for B2B clients using React, TypeScript, and Node.js. - Led migration of CRM mobile application to React Native Expo, enabling seamless web deployment. - Participated in frontend architecture design for client portal and industrial equipment applications."
         },
         {
           "role": "Full Stack web Developer (React.js, Node.js)",
           "company": "NeuroCity, Voronezh",
           "period": "July 2022 – November 2023",
-          "description": "Built comprehensive admin panel for content and device management (frontend + backend). Reworked and optimized SVG-based map editor, improving performance and user experience. Designed and implemented technical support module from scratch. Extended analytics and data visualization functionality."
+          "description": "- Built comprehensive admin panel for content and device management (frontend + backend). - Reworked and optimized SVG-based map editor, improving performance and user experience. - Designed and implemented technical support module from scratch. - Extended analytics and data visualization functionality."
         },
         {
           "role": "Web Developer (Education Program)",
           "company": "Yandex Practicum, Moscow",
           "period": "November 2021 – October 2022",
-          "description": "Completed an intensive one-year full-stack web development program. Executed course projects with code reviews in a team environment. Built a solid foundation in React, Node.js, and full-stack development."
+          "description": "- Completed an intensive one-year full-stack web development program. - Executed course projects with code reviews in a team environment. - Built a solid foundation in React, Node.js, and full-stack development."
         }
       ]
     }
