@@ -112,7 +112,11 @@
             "Map editor",
             "Backend infrastructure"
           ],
-          "image": "/assets/project1.jpg"
+          "images": [
+            "/assets/project1.jpg",
+            "/assets/case-1-2.jpg",
+            "/assets/case-1-3.jpg"
+          ]
         },
         {
           "title": "Mobile Cross-platform CRM System",
@@ -124,7 +128,11 @@
             "Planner",
             "Offline mode"
           ],
-          "image": "/assets/project2.jpg"
+          "images": [
+            "/assets/project2.jpg",
+            "/assets/case-2-2.jpg",
+            "/assets/case-2-3.jpg"
+          ]
         },
         {
           "title": "Cross-platform Mobile App for Agricultural Machinery",
@@ -134,7 +142,11 @@
             "Location tracking",
             "Offline mode with smart sync"
           ],
-          "image": "/assets/project3.jpg"
+          "images": [
+            "/assets/project3.jpg",
+            "/assets/case-3-2.jpg",
+            "/assets/case-3-3.jpg"
+          ]
         },
         {
           "title": "Fullstack Review Management Service",
@@ -148,7 +160,11 @@
             "Referral program",
             "Backend infrastructure"
           ],
-          "image": "/assets/case-4-1.jpg"
+          "images": [
+            "/assets/case-4-1.jpg",
+            "/assets/case-4-2.jpg",
+            "/assets/case-4-3.jpg"
+          ]
         }
       ]
     }

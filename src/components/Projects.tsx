@@ -2,14 +2,165 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { ExternalLink, Layers, CheckCircle2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ExternalLink,
+  Layers,
+  CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 
 interface ProjectItem {
   title: string;
   tech: string[];
   features: string[];
-  image: string;
+  images: string[];
+}
+
+function ProjectSlider({ images, title }: { images: string[]; title: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    }),
+  };
+
+  const paginate = useCallback(
+    (newDirection: number) => {
+      const newIndex = currentIndex + newDirection;
+      if (newIndex >= 0 && newIndex < images.length) {
+        setDirection(newDirection);
+        setCurrentIndex(newIndex);
+      } else if (newIndex < 0) {
+        setDirection(-1);
+        setCurrentIndex(images.length - 1);
+      } else {
+        setDirection(1);
+        setCurrentIndex(0);
+      }
+    },
+    [currentIndex, images.length],
+  );
+
+  // Autoplay
+  useEffect(() => {
+    const timer = setInterval(() => {
+      paginate(1);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [paginate]);
+
+  return (
+    <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-[#f6f8fa] dark:bg-[#0d1117] group/slider">
+      {/* Click Navigation Areas */}
+      <div
+        className="absolute inset-y-0 left-0 w-1/4 z-30 cursor-w-resize"
+        onClick={(e) => {
+          e.stopPropagation();
+          paginate(-1);
+        }}
+      />
+      <div
+        className="absolute inset-y-0 right-0 w-1/4 z-30 cursor-e-resize"
+        onClick={(e) => {
+          e.stopPropagation();
+          paginate(1);
+        }}
+      />
+
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.div
+          key={currentIndex}
+          custom={direction}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 },
+          }}
+          className="absolute inset-0 p-4"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src={images[currentIndex]}
+              alt={`${title} - image ${currentIndex + 1}`}
+              fill
+              className="object-contain"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
+          </div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Overlay gradient for controls visibility */}
+      <div className="absolute inset-0 bg-black/5 group-hover/slider:bg-black/10 transition-colors duration-300 pointer-events-none z-10" />
+
+      {/* Navigation Buttons */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              paginate(-1);
+            }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full bg-white/20 backdrop-blur-md text-white hover:bg-white/40 transition-all opacity-0 group-hover/slider:opacity-100 shadow-lg"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              paginate(1);
+            }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 p-2 rounded-full bg-white/20 backdrop-blur-md text-white hover:bg-white/40 transition-all opacity-0 group-hover/slider:opacity-100 shadow-lg"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </>
+      )}
+
+      {/* Dots Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex gap-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={(e) => {
+              e.stopPropagation();
+              setDirection(i > currentIndex ? 1 : -1);
+              setCurrentIndex(i);
+            }}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              i === currentIndex
+                ? "w-6 bg-accent"
+                : "bg-white/50 hover:bg-white/80"
+            }`}
+            aria-label={`Go to image ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 function ProjectCard({
@@ -27,34 +178,18 @@ function ProjectCard({
       transition={{ delay: index * 0.1 }}
       className="group relative w-full bg-card border-y border-border md:border-x md:rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 mb-8 last:mb-0"
     >
-      <div className="flex flex-col lg:flex-row min-h-[400px]">
-        {/* Image Section */}
-        <div className="lg:w-1/2 relative overflow-hidden bg-muted">
-          <div className="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-          />
-          {/* Placeholder for Gallery Overlay */}
-          <div className="absolute bottom-4 left-4 z-20">
-            <div className="flex gap-2">
-              {/* Gallery components would go here */}
-              <div className="w-2 h-2 rounded-full bg-white/50" />
-              <div className="w-2 h-2 rounded-full bg-white/20" />
-              <div className="w-2 h-2 rounded-full bg-white/20" />
-            </div>
-          </div>
+      <div className="flex flex-col lg:flex-row min-h-[500px]">
+        {/* Slider Section */}
+        <div className="lg:w-1/2 relative">
+          <ProjectSlider images={project.images} title={project.title} />
         </div>
 
         {/* Content Section */}
-        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center space-y-6 bg-card">
+        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-start space-y-6 bg-card">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-accent font-medium text-sm tracking-wider uppercase">
               <Layers className="w-4 h-4" />
-              <span>Case Study</span>
+              <span>Case {index + 1}</span>
             </div>
             <h3 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight group-hover:text-accent transition-colors duration-300">
               {project.title}
@@ -85,13 +220,6 @@ function ProjectCard({
               </li>
             ))}
           </ul>
-
-          <div className="pt-4">
-            <button className="flex items-center gap-2 px-6 py-3 bg-accent text-white dark:text-[#0d1117] rounded-xl font-bold hover:opacity-90 active:scale-95 transition-all duration-300 shadow-lg shadow-accent/20">
-              View Project
-              <ExternalLink className="w-4 h-4" />
-            </button>
-          </div>
         </div>
       </div>
     </motion.article>
