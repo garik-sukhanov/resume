@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Sun, Moon, Github, Mail, Globe, Briefcase } from "lucide-react";
-import { useSyncExternalStore, useEffect, useState } from "react";
+import { useSyncExternalStore, useState } from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
@@ -70,8 +70,11 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 mr-auto ml-12">
-          <a href="#projects" className="text-sm font-medium text-secondary hover:text-accent transition-colors">
-            {t('projects')}
+          <a
+            href="#projects"
+            className="text-sm font-medium text-secondary hover:text-accent transition-colors"
+          >
+            {t("projects")}
           </a>
         </nav>
 
@@ -103,7 +106,7 @@ export function Header() {
 
           <div className="flex items-center gap-1 sm:gap-2">
             <a
-              href="https://github.com/garik-sukhanov"
+              href={`https://${t("contact.github")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-card transition-all text-foreground active:scale-95"
@@ -111,7 +114,7 @@ export function Header() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="mailto:sukhanovigor@bk.ru"
+              href={`mailto:${t("contact.email")}`}
               className="p-2 rounded-lg hover:bg-card transition-all text-foreground active:scale-95"
             >
               <Mail className="w-5 h-5" />
