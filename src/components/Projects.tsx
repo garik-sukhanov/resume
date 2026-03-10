@@ -24,8 +24,12 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: false, margin: "-50%" });
+
+  const hasImages = images && images.length > 0;
+  const currentImageError = imageErrors[currentIndex];
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -64,18 +68,21 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
   // Autoplay on hover/in-view
   useEffect(() => {
     let timer: NodeJS.Timeout;
-    if (isHovered || isInView) {
+    if ((isHovered || isInView) && hasImages && !currentImageError) {
       timer = setInterval(() => {
         paginate(1);
       }, 3000);
     }
     return () => clearInterval(timer);
-  }, [isHovered, isInView, paginate]);
+  }, [isHovered, isInView, paginate, hasImages, currentImageError]);
 
-  if (!images || images.length === 0) {
+  if (!hasImages || currentImageError) {
     return (
-      <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card flex items-center justify-center">
-        <ImageIcon className="w-24 h-24 text-border" />
+      <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card/40 backdrop-blur-sm flex flex-col items-center justify-center gap-4 text-secondary/40 border-r border-border">
+        <ImageIcon className="w-16 h-16" />
+        <span className="text-xs font-medium uppercase tracking-widest">
+          {currentImageError ? "No images" : "Нет скриншотов"}
+        </span>
       </div>
     );
   }
@@ -85,7 +92,7 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
       ref={cardRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card transition-colors duration-300 group/slider"
+      className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden transition-colors duration-300 group/slider"
     >
       {/* Click Navigation Areas */}
       <div
@@ -125,6 +132,9 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
               className="object-contain"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority={currentIndex === 0}
+              onError={() =>
+                setImageErrors((prev) => ({ ...prev, [currentIndex]: true }))
+              }
             />
           </div>
         </motion.div>
@@ -192,26 +202,25 @@ function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="group relative w-full bg-card border-y border-border md:border-x md:rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 mb-8 last:mb-0"
+      className="group relative w-full bg-transparent border-y border-border md:border-x md:rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 mb-8 last:mb-0"
     >
-      {/* Gradient highlight for active card */}
       <AnimatePresence>
         {isInView && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute -inset-px rounded-2xl bg-gradient-to-r from-accent via-green-500 to-accent pointer-events-none"
+            className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-accent/40 via-blue-400/20 to-accent/40 pointer-events-none z-0"
           />
         )}
       </AnimatePresence>
 
-      <div className="relative flex flex-col lg:flex-row">
+      <div className="relative flex flex-col lg:flex-row bg-card/70 backdrop-blur-xl transition-all duration-500">
         <div className="lg:w-1/2 relative">
           <ProjectSlider images={project.images || []} title={project.title} />
         </div>
 
-        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center space-y-6 bg-card">
+        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center space-y-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-accent font-medium text-sm tracking-wider uppercase">
               <Layers className="w-4 h-4" />
