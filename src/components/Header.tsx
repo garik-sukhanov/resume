@@ -107,7 +107,7 @@ export function Header() {
 
           <div className="flex items-center gap-1 sm:gap-2">
             <a
-              href={`https://${t_index("contact.github")}`}
+              href={t_index("contact.github.link")}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-card transition-all text-foreground active:scale-95"
@@ -115,7 +115,7 @@ export function Header() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href={`mailto:${t_index("contact.email")}`}
+              href={t_index("contact.email.link")}
               className="p-2 rounded-lg hover:bg-card transition-all text-foreground active:scale-95"
             >
               <Mail className="w-5 h-5" />

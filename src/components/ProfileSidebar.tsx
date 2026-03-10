@@ -58,41 +58,41 @@ export function ProfileSidebar() {
             <div className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-secondary" />
               <a
-                href={`mailto:${t("contact.email")}`}
+                href={t("contact.email.link")}
                 className="hover:text-accent hover:underline transition-all"
               >
-                {t("contact.email")}
+                {t("contact.email.nick")}
               </a>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-secondary" />
               <a
-                href={`tel:${t("contact.phone")}`}
+                href={t("contact.phone.link")}
                 className="hover:text-accent hover:underline transition-all"
               >
-                {t("contact.phone")}
+                {t("contact.phone.nick")}
               </a>
             </div>
             <div className="flex items-center gap-3">
               <Send className="w-4 h-4 text-secondary" />
               <a
-                href={`https://t.me/${t("contact.telegram").replace("@", "")}`}
+                href={t("contact.telegram.link")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent hover:underline transition-all"
               >
-                {t("contact.telegram")}
+                {t("contact.telegram.nick")}
               </a>
             </div>
             <div className="flex items-center gap-3">
               <Github className="w-4 h-4 text-secondary" />
               <a
-                href={`https://${t("contact.github")}`}
+                href={t("contact.github.link")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent hover:underline transition-all"
               >
-                GitHub
+                {t("contact.github.nick")}
               </a>
             </div>
           </div>

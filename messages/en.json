@@ -27,11 +27,23 @@
     },
     "contact": {
       "title": "Contact Information",
-      "email": "igoreksuhanov@gmail.com",
-      "github": "github.com/garik-sukhanov",
-      "phone": "+7 (999) 529-5596",
-      "location": "Voronezh, Russia / Remote",
-      "telegram": "@garik_sukhanov"
+      "email": {
+        "link": "mailto:igoreksuhanov@gmail.com",
+        "nick": "igoreksuhanov@gmail.com"
+      },
+      "github": {
+        "link": "https://github.com/garik-sukhanov",
+        "nick": "garik-sukhanov"
+      },
+      "telegram": {
+        "link": "https://t.me/garik_sukhanov",
+        "nick": "@garik_sukhanov"
+      },
+      "phone": {
+        "link": "tel:+79995295596",
+        "nick": "+7 (999) 529-5596"
+      },
+      "location": "Voronezh, Russia / Remote"
     },
     "techStack": {
       "title": "Technologies & Skills",
