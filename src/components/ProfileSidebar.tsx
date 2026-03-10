@@ -30,7 +30,7 @@ export function ProfileSidebar() {
       <div className="rounded-xl border border-card-border overflow-hidden bg-card shadow-sm transition-colors duration-300">
         <div className="relative aspect-square w-full">
           <Image
-            src="/sukhanov-photo-3.jpg"
+            src="/sukhanov-photo.jpg"
             alt={t("personalInfo.name")}
             fill
             className="object-cover"
