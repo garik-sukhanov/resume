@@ -59,15 +59,21 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-5xl">
         <Link
           href={`/${locale}`}
-          className="font-bold text-xl flex items-center gap-2 text-foreground hover:opacity-80 transition-opacity"
+          className="group font-bold text-xl flex items-center gap-2 text-foreground hover:opacity-80 transition-opacity"
         >
-          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-            <Briefcase className="w-5 h-5 text-accent" />
+          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center text-white dark:text-[#0d1117] transition-colors duration-300">
+            <Briefcase className="w-5 h-5" />
           </div>
           <span className="hidden sm:inline tracking-tight font-extrabold transition-colors duration-300">
             Sukhanov.dev
           </span>
         </Link>
+
+        <nav className="hidden md:flex items-center gap-8 mr-auto ml-12">
+          <a href="#projects" className="text-sm font-medium text-secondary hover:text-accent transition-colors">
+            {t('projects')}
+          </a>
+        </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
           <button

@@ -100,6 +100,57 @@
           "description": "- Completed an intensive one-year full-stack web development program. - Executed course projects with code reviews in a team environment. - Built a solid foundation in React, Node.js, and full-stack development."
         }
       ]
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "items": [
+        {
+          "title": "Fullstack Admin Panel for Navigation Device Management",
+          "tech": ["React", "Node.js"],
+          "features": [
+            "Statistics system",
+            "Map editor",
+            "Backend infrastructure"
+          ],
+          "image": "/assets/project1.jpg"
+        },
+        {
+          "title": "Mobile Cross-platform CRM System",
+          "tech": ["React-Native", "Expo"],
+          "features": [
+            "Calendar",
+            "Tasks",
+            "Contacts",
+            "Planner",
+            "Offline mode"
+          ],
+          "image": "/assets/project2.jpg"
+        },
+        {
+          "title": "Cross-platform Mobile App for Agricultural Machinery",
+          "tech": ["React-Native", "Expo"],
+          "features": [
+            "Loading/unloading control",
+            "Location tracking",
+            "Offline mode with smart sync"
+          ],
+          "image": "/assets/project3.jpg"
+        },
+        {
+          "title": "Fullstack Review Management Service",
+          "tech": ["React", "Node.js"],
+          "features": [
+            "Client & Admin dashboards",
+            "Authentication",
+            "Payment integration",
+            "Email & Telegram notifications",
+            "Statistics",
+            "Referral program",
+            "Backend infrastructure"
+          ],
+          "image": "/assets/case-4-1.jpg"
+        }
+      ]
     }
   },
   "Header": {
