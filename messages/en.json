@@ -106,10 +106,10 @@
       "items": [
         {
           "title": "Fullstack Admin Panel for Navigation Device Management",
-          "tech": ["React", "Node.js"],
+          "tech": ["React", "Node.js", "Express", "MongoDB"],
           "features": [
-            "Statistics system",
-            "Map editor",
+            "Statistics system, data collection and visualization",
+            "Map editor based on SVG",
             "Backend infrastructure"
           ],
           "images": ["/assets/case-1-1.jpg"]
@@ -146,7 +146,7 @@
         },
         {
           "title": "Fullstack Review Management Service",
-          "tech": ["React", "Node.js"],
+          "tech": ["React", "Node.js", "NestJS", "PostgreSQL", "ANTd"],
           "features": [
             "Client & Admin dashboards",
             "Authentication",
@@ -164,7 +164,13 @@
         },
         {
           "title": "Admin Panel for Agricultural Machinery Monitoring & Data Aggregation",
-          "tech": ["Next.js", "Tanstack Query", "Zod", "React Hook Form"],
+          "tech": [
+            "Next.js",
+            "Tanstack Query",
+            "Zod",
+            "React Hook Form",
+            "Material-UI"
+          ],
           "features": [
             "Role-based access control",
             "Data aggregation from various devices",
