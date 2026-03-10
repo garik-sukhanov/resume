@@ -19,7 +19,7 @@ export function Footer() {
 
         <div className="flex items-center gap-6">
           <a
-            href={`https://${t("contact.github")}`}
+            href={`https://${t_index("contact.github")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary hover:text-accent transition-colors duration-300"
@@ -27,7 +27,7 @@ export function Footer() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href={`https://t.me/${t("contact.telegram")}`}
+            href={`https://t.me/${t_index("contact.telegram")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary hover:text-accent transition-colors duration-300"

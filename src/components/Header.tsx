@@ -16,6 +16,7 @@ export function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("Header");
+  const t_index = useTranslations("Index");
 
   const isClient = useSyncExternalStore(
     emptySubscribe,
@@ -106,7 +107,7 @@ export function Header() {
 
           <div className="flex items-center gap-1 sm:gap-2">
             <a
-              href={`https://${t("contact.github")}`}
+              href={`https://${t_index("contact.github")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-card transition-all text-foreground active:scale-95"
@@ -114,7 +115,7 @@ export function Header() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href={`mailto:${t("contact.email")}`}
+              href={`mailto:${t_index("contact.email")}`}
               className="p-2 rounded-lg hover:bg-card transition-all text-foreground active:scale-95"
             >
               <Mail className="w-5 h-5" />
