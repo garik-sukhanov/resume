@@ -1,5 +1,10 @@
 {
   "Index": {
+    "seo": {
+      "title": "Игорь Суханов | Fullstack Разработчик | Резюме",
+      "description": "Портфолио и резюме Игоря Суханова, Fullstack разработчика с 4-летним опытом. Специализация на React, Next.js, TypeScript и React Native.",
+      "keywords": "Игорь Суханов, Fullstack разработчик, React разработчик, Next.js, TypeScript, Резюме, Портфолио, Воронеж, Удаленно"
+    },
     "personalInfo": {
       "name": "Игорь Суханов",
       "prof": "Full Stack Web Developer (frontend-focused)"

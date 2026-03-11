@@ -1,5 +1,10 @@
 {
   "Index": {
+    "seo": {
+      "title": "Igor Sukhanov | Fullstack Developer | Resume",
+      "description": "Portfolio and Resume of Igor Sukhanov, Fullstack Developer with 4 years of experience. Specializing in React, Next.js, TypeScript, and React Native.",
+      "keywords": "Igor Sukhanov, Fullstack Developer, React Developer, Next.js, TypeScript, Resume, Portfolio, Remote, Voronezh"
+    },
     "personalInfo": {
       "name": "Igor Sukhanov",
       "prof": "Full Stack Web Developer (frontend-focused)"
