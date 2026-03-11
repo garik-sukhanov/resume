@@ -116,16 +116,6 @@
       "title": "Featured Projects",
       "items": [
         {
-          "title": "Fullstack Admin Panel for Navigation Device Management",
-          "tech": ["React", "Node.js", "Express", "MongoDB"],
-          "features": [
-            "Statistics system, data collection and visualization",
-            "Map editor based on SVG",
-            "Backend infrastructure"
-          ],
-          "images": ["/assets/case-1-1.jpg"]
-        },
-        {
           "title": "Mobile Cross-platform CRM System",
           "tech": ["React-Native", "Expo"],
           "features": [
