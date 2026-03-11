@@ -62,8 +62,8 @@ export function Header() {
           href={`/${locale}`}
           className="group font-bold text-xl flex items-center gap-2 text-foreground hover:opacity-80 transition-opacity"
         >
-          <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center text-white dark:text-[#0d1117] transition-colors duration-300">
-            <Briefcase className="w-5 h-5" />
+          <div className="w-8 h-8 bg-main rounded-lg flex items-center justify-center transition-colors duration-300">
+            <Briefcase className="w-5 h-5 text-accent" />
           </div>
           <span className="hidden sm:inline tracking-tight font-extrabold transition-colors duration-300">
             Sukhanov.dev
