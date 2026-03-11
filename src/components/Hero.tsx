@@ -44,13 +44,13 @@ export function Hero() {
         transition={{ duration: 0.5 }}
         className="space-y-2 w-full"
       >
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight flex flex-wrap items-center gap-x-2 min-h-[4rem] sm:min-h-[3rem]">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0969da] to-[#2ea043] dark:from-[#2f81f7] dark:to-[#3fb950] break-words">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight flex flex-wrap items-center gap-x-2 min-h-16 sm:min-h-12">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0969da] to-[#2ea043] dark:from-[#2f81f7] dark:to-[#3fb950] break-words">
             {displayText}
             <motion.span
               animate={{ opacity: [0, 1, 0] }}
               transition={{ repeat: Infinity, duration: 0.8 }}
-              className="inline-block w-[3px] h-[1.8rem] sm:h-[2.2rem] bg-accent ml-1 align-middle transition-colors duration-300"
+              className="inline-block w-0.75 h-[1.8rem] sm:h-[2.2rem] bg-accent ml-1 align-middle transition-colors duration-300"
             />
           </span>
           <span className="text-foreground whitespace-nowrap transition-colors duration-300">

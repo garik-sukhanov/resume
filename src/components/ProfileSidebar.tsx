@@ -26,7 +26,7 @@ export function ProfileSidebar() {
       : "/FullStack dev EN Sukhanov.pdf";
 
   return (
-    <div className="space-y-6 max-w-[500px] mx-auto md:max-w-none">
+    <div className="space-y-6 max-w-125 mx-auto md:max-w-none">
       <div className="rounded-xl border border-card-border overflow-hidden bg-card shadow-sm transition-colors duration-300">
         <div className="relative aspect-square w-full">
           <Image
@@ -98,7 +98,7 @@ export function ProfileSidebar() {
           </div>
 
           <div className="pt-4">
-            <div className="relative p-[1.5px] rounded-lg bg-gradient-to-r from-[#0969da] via-[#2ea043] to-[#0969da] animate-gradient-x transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-none">
+            <div className="relative p-[1.5px] rounded-lg bg-linear-to-r from-[#0969da] via-[#2ea043] to-[#0969da] animate-gradient-x transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-none">
               <a
                 href={pdfUrl}
                 download

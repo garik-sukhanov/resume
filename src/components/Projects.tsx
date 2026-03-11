@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
-  ExternalLink,
   Layers,
   CheckCircle2,
   ChevronLeft,
@@ -78,7 +77,7 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
 
   if (!hasImages || currentImageError) {
     return (
-      <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden bg-card/40 backdrop-blur-sm flex flex-col items-center justify-center gap-4 text-secondary/40 border-r border-border">
+      <div className="relative w-full h-full min-h-75 lg:min-h-100 overflow-hidden bg-card/40 backdrop-blur-sm flex flex-col items-center justify-center gap-4 text-secondary/40 border-r border-border">
         <ImageIcon className="w-16 h-16" />
         <span className="text-xs font-medium uppercase tracking-widest">
           {currentImageError ? "No images" : "Нет скриншотов"}
@@ -92,7 +91,7 @@ function ProjectSlider({ images, title }: { images: string[]; title: string }) {
       ref={cardRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative w-full h-full min-h-[300px] lg:min-h-[400px] overflow-hidden transition-colors duration-300 group/slider"
+      className="relative w-full h-full min-h-75 lg:min-h-100 overflow-hidden transition-colors duration-300 group/slider"
     >
       {/* Click Navigation Areas */}
       <div
@@ -210,7 +209,7 @@ function ProjectCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-accent/40 via-blue-400/20 to-accent/40 pointer-events-none z-0"
+            className="absolute -inset-px rounded-2xl bg-linear-to-r from-accent/40 via-blue-400/20 to-accent/40 pointer-events-none z-0"
           />
         )}
       </AnimatePresence>
