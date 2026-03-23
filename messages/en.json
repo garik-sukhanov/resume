@@ -98,16 +98,16 @@
       "title": "Professional Experience",
       "items": [
         {
-          "role": "Web Developer (React.js, ReactNative, Node.js)",
-          "company": "KOBLiK Group, Voronezh",
-          "period": "November 2023 – Present",
-          "description": "- Engineered and maintained web and mobile applications for B2B clients using React, TypeScript, and Node.js. - Successfully migrated a mobile CRM application to React Native Expo, optimizing for framework-specific requirements. - Architected frontend solutions for client portals and industrial equipment applications."
+          "role": "Full-stack Web Developer (Frontend)",
+          "company": "KOBLiK Group | KIT Division, Voronezh",
+          "period": "Nov 2023 – Present (2 yrs 5 mos)",
+          "description": "- React Native CRM apps: migrated the application to Expo, speeding up development and adding web support; reduced build time from 30 to 10 minutes. - Designed the module structure for a customer portal for machinery buyers; implemented REST API and WebSocket integration. - Built an app for weighing equipment: real-time data streaming, responsive UI, and hardware integration (100+ live parameters such as weight, temperature, geolocation, etc.). - Stack: React Native, Expo, TypeScript, REST API, WebSocket, React, Node.js, Jotai, PostgreSQL."
         },
         {
-          "role": "Full Stack web Developer (React.js, Node.js)",
+          "role": "Full-stack Web Developer",
           "company": "NeuroCity, Voronezh",
-          "period": "July 2022 – November 2023",
-          "description": "- Built a comprehensive full-stack admin panel for content and device management. - Optimized an SVG-based map editor, significantly enhancing performance and user experience. - Designed and implemented a technical support module from the ground up. - Expanded analytics and data visualization functionality."
+          "period": "Jul 2022 – Nov 2023 (1 yr 5 mos)",
+          "description": "- Part of the admin portal and backend infrastructure team. - Delivered new admin panel modules for content and device management from scratch: architecture design and full-stack implementation. - Deeply refactored an SVG-based map editor: redesigned rendering logic, improved performance and extensibility, enabling delivery of 10+ new tools per month. - Designed and shipped a support module end-to-end (DB design to UI), cutting ticket handling time from 2 days to < 1 hour. - Expanded statistics collection and visualization: added 20+ metrics, optimized filtering, and moved heavy computations server-side. - Stack: React, Node.js, TypeScript, MongoDB, REST API, SVG."
         },
         {
           "role": "Web Developer (Education Program)",

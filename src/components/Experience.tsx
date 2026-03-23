@@ -37,19 +37,22 @@ export function Experience() {
                 {item.period}
               </span>
             </div>
-            <div className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2">
               {item.description
                 .split("- ")
                 .filter(Boolean)
                 .map((point, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
+                  <li key={i} className="flex items-start gap-2">
+                    <span
+                      className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"
+                      aria-hidden="true"
+                    />
                     <p className="text-sm text-foreground leading-relaxed">
                       {point.trim()}
                     </p>
-                  </div>
+                  </li>
                 ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
