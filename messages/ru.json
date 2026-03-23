@@ -82,6 +82,18 @@
         {
           "name": "Tools & DevOps",
           "items": ["Git", "GitHub", "Docker", "Docker Compose", "CI/CD"]
+        },
+        {
+          "name": "AI Tools",
+          "items": [
+            "Cloud Код",
+            "Курсор",
+            "Skills",
+            "RAG",
+            "MCP",
+            "Agent Мод",
+            "Спек-кодинг"
+          ]
         }
       ]
     },

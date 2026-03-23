@@ -91,6 +91,18 @@
             "Linux",
             "Nginx"
           ]
+        },
+        {
+          "name": "AI Tools",
+          "items": [
+            "Cloud Code",
+            "Cursor",
+            "Skills",
+            "RAG",
+            "MCP",
+            "Agent Mode",
+            "Spec Coding"
+          ]
         }
       ]
     },
